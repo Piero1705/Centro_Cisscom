@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso de la UNAM/Cisscom | Examen </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .animated-image {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            cursor: pointer;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Concurso Universitario</h1>
+    </header>
+
+    <nav>
+        <a href="#modalidad1"> Descripción </a>
+        <a href="#modalidad2"> Lista de Docentes </a>
+        <a href="#modalidad3"> Modalidades</a>
+    </nav>
+
+    <section id="modalidad1">
+        <h2> Descripción </h2>
+        <p> El Concurso Universitario es una emocionante iniciativa que busca fomentar la participación activa de estudiantes </p>
+        <p> de diversas disciplinas en un entorno académico estimulante. Diseñado para cultivar el ingenio, la creatividad y </p>
+        <p> el espíritu competitivo, este evento ofrece a los estudiantes la oportunidad de destacar sus habilidades y conocimientos </p>
+        <p> en un ambiente desafiante y colaborativo. </p>
+
+        <div class="image-container">
+            <a href="#docente1"><img class="animated-image" src="imagen_1.0.jpg" alt="Imagen 1"></a>
+            <a href="#docente2"><img class="animated-image" src="imagen_1.1.jpg" alt="Imagen 2"></a>
+            <a href="#docente3"><img class="animated-image" src="imagen_1.2.jpg" alt="Imagen 3"></a>
+        </div>
+    </section>
+
+    <section id="modalidad2">
+        <h2> Lista de Docentes </h2>
+        <p> Los participantes tendrán la oportunidad única de interactuar con docentes destacados en sus respectivos campos. </p>
+        <p> Estos educadores no solo serán jueces imparciales, sino también mentores y fuentes de inspiración que ofrecerán </p>
+        <p> una perspectiva valiosa y apoyo a los estudiantes durante todo el concurso. </p>
+    </section>
+
+    <section id="modalidad3">
+        <h2> Modalidades </h2>
+        <p> El concurso abarca una amplia gama de modalidades, desde desafíos académicos tradicionales hasta actividades prácticas </p>
+        <p> que ponen a prueba las habilidades prácticas y el pensamiento crítico de los participantes. Cada modalidad está </p>
+        <p> cuidadosamente diseñada para promover el aprendizaje integral y proporcionar una experiencia enriquecedora que va </p>
+        <p> más allá de las aulas universitarias. </p>
+    </section>
+
+    <section id="docente1">
+        <h2> Docente N°1 </h2>
+        <p> Tony Stark </p>
+        <a href="#docente3"><img src="imagen_2.0.jpg" alt="Imagen 4"></a>
+    </section>
+
+    <section id="docente2">
+        <h2> Docente N°2 </h2>
+        <p> Kakashi Sensei </p>
+        <a href="#docente3"><img src="imagen_2.1.jpg" alt="Imagen 5"></a>
+    </section>
+
+    <section id="docente3">
+        <h2> Docente N°3 </h2>
+        <p> Shrek </p>
+        <a href="#docente3"><img src="imagen_2.2.jpg" alt="Imagen 6"></a>
+    </section>
+
+    <form action="procesar_formulario.php" method="post">
+        <h2> Registrar Usuario </h2>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
